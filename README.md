@@ -30,6 +30,7 @@ A custom [Understrap](https://understrap.github.io/)(Underscores + Bootstrap) th
 Note: this project was not finalized due to funding limitations.
 
 Main SCSS file: /sass/theme/_theme.scss
+
 SCSS variables: /sass/theme/_theme_variables.scss
 
 ### Landing page
