@@ -1,0 +1,276 @@
+/*
+ * note: custom classes have trailing or connecting double dashes
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto+Slab&display=swap");
+
+body {
+  font-family: "Helvetica Neue";
+}
+a {
+  text-decoration: none;
+}
+.site-info {
+  font-size: small;
+}
+
+.home {
+  footer {
+    color: $primary-light;
+
+    a {
+      color: $primary;
+    }
+  }
+}
+
+.announcement-container {
+  h2 {
+    text-shadow: 2px 2px 4px $dark;
+  }
+}
+
+.announcement {
+  header {
+    h1 {
+      display: none;
+    }
+  }
+}
+
+.post-edit-link {
+  color: $secondary;
+  font-size: x-large;
+}
+
+.post-navigation {
+  .nav-links {
+    a {
+      color: $white;
+    }
+  }
+}
+
+.cat-item {
+  list-style-type: none;
+
+  a {
+    color: $dark;
+    font-size: small;
+
+    &:hover {
+    }
+  }
+
+  .children {
+    list-style-type: none;
+    padding-left: 1rem;
+
+    li {
+      &:before {
+        content: "\21B3";
+      }
+    }
+  }
+}
+
+#wrapper-main-navbar {
+  z-index: 1021;
+}
+
+.navbar-brand {
+  font-family: "Great Vibes", cursive;
+  text-transform: capitalize;
+  font-size: 30px;
+}
+
+.card-columns {
+  .card {
+    .card-footer {
+      color: $secondary;
+      font-weight: bold;
+    }
+  }
+}
+
+.announcement-link {
+  &:hover {
+    text-decoration: none;
+  }
+
+  .announcement-card {
+    transition: all 0.5s;
+
+    &:hover {
+      box-shadow: inset 0 0 100px -80px $dark;
+      border-radius: 15px;
+      color: rgba(255, 255, 255, 1);
+      text-shadow: 2px 2px $dark;
+    }
+  }
+}
+
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-4rem) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+#home-hero {
+  background-image: linear-gradient(
+      to right top,
+      rgba(0, 0, 0, 0.4),
+      rgba(30, 20, 32, 0.7)
+    ),
+    url("https://disciplinedmindstutoring.com/wp-content/uploads/2021/01/dmbanneronlinestudent-scaled-e1611787094220.jpg");
+  color: $white;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 75vh;
+
+  h1 {
+    text-shadow: 2px 2px $gray-700;
+    animation: pop-in 0.6s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
+    opacity: 0;
+    animation-delay: 0.6s;
+  }
+
+  .home-hero-lead {
+    text-shadow: 1px 1px $gray-700;
+    animation: pop-in 0.6s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
+    opacity: 0;
+    animation-delay: 0.8s;
+  }
+
+  .owl-carousel {
+    animation: pop-in 0.6s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
+    animation-delay: 1s;
+    opacity: 0;
+  }
+}
+
+.secondary--nav--wrapper {
+  background-color: $white;
+  top: 10vh;
+  animation: pop-in 0.6s ease-in forwards;
+  animation-delay: 2s;
+  opacity: 0;
+  z-index: 2000;
+
+  li {
+    .secondary--nav--link {
+      color: $gray-600;
+      position: relative;
+
+      &.active {
+        transform: scale(1.1);
+        color: $gray-700;
+        border-left: 3px solid $secondary;
+      }
+      &:hover {
+        transform: scale(1.1);
+        transition: all 0.5s ease-in-out;
+      }
+    }
+  }
+}
+@keyframes grow-upcoming {
+  0% {
+    opacity: 0;
+    content: "► ";
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+.testprep-section {
+  margin-top: 15vh;
+  .group-course-row {
+    margin-bottom: 15vh;
+
+    .group-courses {
+      border-left: 3px solid $primary;
+    }
+    .upcoming-side-section {
+      background-color: $gray-200;
+      div {
+        .upcoming-course-header {
+          text-decoration: underline;
+        }
+      }
+      .upcoming-courses {
+        div {
+          .upcoming-course-item {
+            color: $primary;
+            &:before {
+              opacity: 0;
+              content: "► ";
+              transition: all 0.5s;
+              margin-left: -25px;
+            }
+            &:hover {
+              text-decoration: none;
+              &:before {
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.qualified-tutors {
+  .qualified-tutor {
+    img {
+      height: 300px;
+    }
+  }
+  .tutor-cartoon {
+    img {
+      height: 300px;
+    }
+  }
+
+  .qualified-tutor-text {
+    @media (max-width: 1199.98px) {
+      margin-left: -27px;
+    }
+  }
+}
+#specialists-row {
+  margin-bottom: 15vh;
+}
+
+.online-row {
+  margin-top: 15vh;
+}
+
+.subject-table-header {
+  background-color: #d5e5f0;
+}
+
+.subject-table {
+  a {
+    color: $gray-700;
+  }
+}
+
+.specialists-card {
+  margin-top: 250px;
+}
+
+.specialists-at-every-level-card {
+  background: #eaf2f7;
+}
+.online-row {
+  margin-bottom: 15vh;
+}
